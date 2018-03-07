@@ -24,46 +24,9 @@ firerefsub.on('value',function (datasnapshot){
 fullname.innerHTML=user.email;
 
 
-
 //.ref('users/').child(userId)
 //ref("users")
-var query = firebase.database().ref('users/').child(userId).orderByKey();
-query.once("value")
-  .then(function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      // key will be "ada" the first time and "alan" the second time
-      var key = childSnapshot.key;
-      // childData will be the actual contents of the child
 
-      var query1 = firebase.database().ref('users/').child(userId).child(key).orderByKey();
-query1.once("value")
-  .then(function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      // key will be "ada" the first time and "alan" the second time
-      var key = childSnapshot.key;
-      // childData will be the actual contents of the child
-
-      if(key=="dishName")
-      {
-        var childData = childSnapshot.val();
-        var newl="<br>";
-        var tobeadded="<div class='col-md-6 col-lg-4'><a class='portfolio-item d-block mx-auto' href='#" +childData+"'><div class='portfolio-item-caption d-flex position-absolute h-100 w-100'><div class='portfolio-item-caption-content my-auto w-100 text-center text-white'><i class='fa fa-search-plus fa-3x'></i></div></div><img class='img-fluid' src='img/portfolio/cake.png' alt=''> <h6>"+childData+"</h6><div id='placeithere'></div></a></div>"
-        var theback="<div class=‘portfolio-modal mfp-hide’ id=‘"+childData+"’><div class=‘portfolio-modal-dialog bg-white’><a class=‘close-button d-none d-md-block portfolio-modal-dismiss’ href=‘#’><i class=‘fa fa-3x fa-times’></i></a><div class=‘container text-center’><div class=‘row’><div class=‘col-lg-8 mx-auto’><h2 class=‘text-secondary text-uppercase mb-0’>Project Name</h2><hr class=‘star-dark mb-5’><img class=‘img-fluid mb-5’ src=‘img/portfolio/cabin.png’ alt=‘‘><p class=‘mb-5’><dl><dt>Coffee</dt><dd>Black hot drink</dd><dt>Milk</dt><dd>White cold drink</dd></dl></p><a class=‘btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss’ href=‘#’><i class=‘fa fa-close’></i>Close Project</a></div></div></div></div></div>"
-        $("#placeItHere").append(tobeadded,theback);
-      //  $("#fortheback").append(theback);
-
-      }
-
-  });
-});
-      var childData = childSnapshot.val();
-
-
-
-
-
-  });
-});
 //var recipref= firebase.ref('/users/').child(userId);
 //recipref.on('value',function(snapsnap){
   //snapsnap.forEach(function(childSnapshot) {
@@ -160,6 +123,9 @@ $("#signoutBtn").click(
     firebase.auth().signOut().then(function() {
   // Sign-out successful.
 
+  $("#loginProgress").hide();
+  $("#loginBtn").show();
+
 }).catch(function(error) {
   // An error happened.
 });
@@ -181,7 +147,7 @@ $("#register").click(
   console.log(errorMessage);
   // ...
 });
-alert( "you have successfully registered");
+//alert( "you have successfully registered");
 // Get a reference to the database service
 var databaseRef = firebase.database().ref('users/' );
 var userId = firebase.auth().currentUser;
@@ -263,14 +229,15 @@ $('#justadd').click(
       //  dishTocost:tocost,
         dishIngredients:ingredients,
         dishServings: servings,
-        dishDescription: description
+        dishDescription: description,
+        uid:uid
     }
 //alert(time);
     var updates={};
     updates['/users/' +userId+ '/'+uid]=data; //'/users' +uid
     firebase.database().ref().update(updates);
 //    firebase.database().ref().child('users').push().data;
-alert("reached");
+//alert("reached");
 
   }
 );
@@ -307,3 +274,152 @@ $("#editsubbutton").click(
       }
   }
 );
+
+
+
+$("#loadmydata").click(
+  function(){
+var userId = firebase.auth().currentUser.uid;
+  alert(  firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+      var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+      // ...
+    }) );
+    var dishName="";
+    var dishDescription="";
+    var dishIngredients="";
+    var dishTime="";
+    var dishServings="";
+    var dishtype="";
+var count=0;
+
+    var query = firebase.database().ref('users/').child(userId).orderByKey();
+    query.once("value")
+      .then(function(snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+          // key will be "ada" the first time and "alan" the second time
+          var key = childSnapshot.key;
+          // childData will be the actual contents of the child
+
+          var query1 = firebase.database().ref('users/').child(userId).child(key);
+    query1.once("value")
+      .then(function(snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+          // key will be "ada" the first time and "alan" the second time
+          var key1 = childSnapshot.key;
+          // childData will be the actual contents of the child
+count=count+1;
+alert(count);
+alert(key1);
+
+        //  if(key=="dishName")
+        //  {
+        //    var childData = childSnapshot.val();
+        //    var newl="<br>";
+        //    var tobeadded="<div class='col-md-6 col-lg-4'><a class='portfolio-item d-block mx-auto' href='#" +childData+"'><div class='portfolio-item-caption d-flex position-absolute h-100 w-100'><div class='portfolio-item-caption-content my-auto w-100 text-center text-white'><i class='fa fa-search-plus fa-3x'></i></div></div><img class='img-fluid' src='img/portfolio/cake.png' alt=''> <h6><button id="+childData+">"+childData+"</button></h6><div id='placeithere'></div></a></div>"
+        //    var theback="<div class=‘portfolio-modal mfp-hide’ id=‘"+childData+"’><div class=‘portfolio-modal-dialog bg-white’><a class=‘close-button d-none d-md-block portfolio-modal-dismiss’ href=‘#’><i class=‘fa fa-3x fa-times’></i></a><div class=‘container text-center’><div class=‘row’><div class=‘col-lg-8 mx-auto’><h2 class=‘text-secondary text-uppercase mb-0’>Project Name</h2><hr class=‘star-dark mb-5’><img class=‘img-fluid mb-5’ src=‘img/portfolio/cabin.png’ alt=‘‘><p class=‘mb-5’><dl><dt>Coffee</dt><dd>Black hot drink</dd><dt>Milk</dt><dd>White cold drink</dd></dl></p><a class=‘btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss’ href=‘#’><i class=‘fa fa-close’></i>Close Project</a></div></div></div></div></div>"
+      //      $("#placeItHere").append(tobeadded,theback);
+           //$("#fortheback").append(theback);
+
+          // var style="<style>#overlay {display: none;position: absolute;top: 0;bottom: 0;background: #999;width: 100%;height: 100%;opacity: 0.8;z-index: 100;}#popup {display: none;position: absolute;top: 50%;left: 50%;background: #fff;width: 500px;height: 500px;margin-left: -250px; /*Half the value of width to center div*/margin-top: -250px; /*Half the value of height to center div*/z-index: 200;}#popupclose {float: right;padding: 10px;cursor: pointer;}.popupcontent {padding: 10px;}#button {cursor: pointer;}</style>";
+
+        //   var pop1="<div id=‘overlay’></div><div id=‘popup’><div class=‘popupcontrols’><span id=‘popupclose’>X</span></div><div class=‘popupcontent’><h1>"+childData+"</h1></div></div><script type=‘text/javascript’>var closePopup = document.getElementById(‘popupclose’);var overlay = document.getElementById(‘overlay’);var popup = document.getElementById(‘popup’);var button = document.getElementById(‘"+childData+"’);closePopup.onclick = function() {overlay.style.display = 'none';popup.style.display = 'none';};button.onclick = function() {overlay.style.display = 'block';popup.style.display = 'block';}</script>"
+
+      //    }
+
+
+
+
+          if(key1=="dishDescription")
+          {
+             dishDescription=childSnapshot.val();
+
+
+          }
+          if(key1=="dishIngredients")
+          {
+             dishIngredients=childSnapshot.val();
+
+          }
+          if(key1=="dishTime")
+          {
+             dishTime=childSnapshot.val();
+          }
+          if(key1=="dishServings")
+          {
+             dishServings=childSnapshot.val();
+          }
+          if(key1=="dishtype")
+          {
+             dishtype=childSnapshot.val();
+          }
+          if(key1=="dishName")
+          {
+             dishName=childSnapshot.val();
+             var tobeadded="<div class='col-md-6 col-lg-4'><a class='portfolio-item d-block mx-auto' href='#" +dishName+"'><div class='portfolio-item-caption d-flex position-absolute h-100 w-100'><div class='portfolio-item-caption-content my-auto w-100 text-center text-white'><i class='fa fa-search-plus fa-3x'></i></div></div><img class='img-fluid' src='img/portfolio/cake.png' alt=''> <h6><button id="+childData+">"+dishName+"</button></h6><div id='placeithere'></div></a></div>"
+             var theback="<div class=‘portfolio-modal mfp-hide’ id=‘"+childData+"’><div class=‘portfolio-modal-dialog bg-white’><a class=‘close-button d-none d-md-block portfolio-modal-dismiss’ href=‘#’><i class=‘fa fa-3x fa-times’></i></a><div class=‘container text-center’><div class=‘row’><div class=‘col-lg-8 mx-auto’><h2 class=‘text-secondary text-uppercase mb-0’>Project Name</h2><hr class=‘star-dark mb-5’><img class=‘img-fluid mb-5’ src=‘img/portfolio/cabin.png’ alt=‘‘><p class=‘mb-5’><dl><dt>Coffee</dt><dd>Black hot drink</dd><dt>Milk</dt><dd>White cold drink</dd></dl></p><a class=‘btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss’ href=‘#’><i class=‘fa fa-close’></i>Close Project</a></div></div></div></div></div>"
+            // $("#discoverkit").append(tobeadded,theback);
+
+          }
+var dl="<dl>";
+var item="<dt>"+key1+"</dt><dd>"+childSnapshot.val()+"</dd><dt>";
+var dlend="</dl>";
+$("#discoverkit").append(dl,item,dlend);
+          var childData = childSnapshot.val();
+
+      //  alert(childData);
+      });
+
+    });
+
+
+
+
+      });
+    });
+  }
+)
+
+
+
+
+$(document).ready(function(){
+
+  $("#discoverkit").hide();
+  $("#addmyrecipe").hide();
+    $(".discoverandcover").click(function(){
+        $("#discover").show();
+       $("#addmyrecipe").hide();
+       $("#about").hide();
+       $("#portfolio").hide();
+
+    });
+
+    $(".addmyreccover").click(function(){
+        $("#discover").hide();
+       $("#addmyrecipe").show();
+       $("#about").hide();
+       $("#portfolio").hide();
+
+    });
+
+    $(".aboutmecover").click(function(){
+        $("#discover").hide();
+       $("#addmyrecipe").hide();
+       $("#about").show();
+       $("#portfolio").show();
+
+    });
+
+    $(".cookbookcover").click(function(){
+        $("#discover").hide();
+       $("#addmyrecipe").hide();
+       $("#about").show();
+       $("#portfolio").show();
+
+    });
+
+
+
+
+
+});
