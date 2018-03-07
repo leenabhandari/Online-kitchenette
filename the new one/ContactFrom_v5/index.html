@@ -15,12 +15,12 @@
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "########################",
-    authDomain: "########################",
-    databaseURL: "######################",
-    projectId: "#######################",
-    storageBucket: "#####################",
-    messagingSenderId: "#####################"
+    apiKey: "AIzaSyCv8_3VVpaI_qxvSZT-HwTODWoEwQMjkBs",
+    authDomain: "the-online-kitchenette.firebaseapp.com",
+    databaseURL: "https://the-online-kitchenette.firebaseio.com",
+    projectId: "the-online-kitchenette",
+    storageBucket: "the-online-kitchenette.appspot.com",
+    messagingSenderId: "621037254716"
   };
   firebase.initializeApp(config);
 </script>
@@ -208,21 +208,21 @@
          <div class="collapse navbar-collapse" id="navbarResponsive">
            <ul class="navbar-nav ml-auto">
 						 <li class="nav-item mx-0 mx-lg-1">
-               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About me</a>
+               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger aboutmecover" href="#about">About me</a>
              </li>
              <li class="nav-item mx-0 mx-lg-1">
-               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">My CookBook</a>
+               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger cookbookcover" href="#portfolio">My CookBook</a>
              </li>
 
         <!--     <li class="nav-item mx-0 mx-lg-1">
                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact me</a>
              </li>
 						 <li class="nav-item mx-0 mx-lg-1"> -->
-               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#addmyrecipe">Add my Recipe</a>
+               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger addmyreccover" href="#addmyrecipe">Add my Recipe</a>
              </li>
 
 						 <li class="nav-item mx-0 mx-lg-1">
-               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Discover</a>
+               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger discoverandcover" href="#discover">Discover</a>
              </li>
 
 						 <li class="nav-item mx-0 mx-lg-1">
@@ -244,7 +244,7 @@
          <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
          <h1 class="text-uppercase mb-0" id="fullname">Full Name</h1>
          <hr class="star-light">
-         <h2 class="font-weight-light mb-0" id="editmysubtitle">Web Developer - Graphic Artist - User Experience Designer</h2>
+         <h2 class="font-weight-light mb-0" id="editmysubtitle">Cook- Baker - Professional</h2>
 				 <!-- Accent-colored flat button -->
 <button class="mdl-button mdl-js-button mdl-button--accent" id="editsubbutton">
   Edit
@@ -278,80 +278,89 @@
 			 </div>
 		 </section>
 
-		 
-     <!-- Portfolio Grid Section -->
-     <section class="portfolio" id="portfolio">
-       <div class="container">
-         <h2 class="text-center text-uppercase text-secondary mb-0">My CookBook</h2>
-         <hr class="star-dark mb-5">
-         <!--<div class="row" >-->
-					 <div id="placeItHere">
-           <div class="col-md-6 col-lg-4">
-             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
-               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                   <i class="fa fa-search-plus fa-3x"></i>
-                 </div>
-               </div>
-               <img class="img-fluid" src="img/portfolio/cake.png" alt=""> <h6> Dish name</h6>
-							 <div id="placeithere"></div>
-             </a>
-           </div>
 
-					 </div>
-					 <!--
-           <div class="col-md-6 col-lg-4">
-             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
-               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                   <i class="fa fa-search-plus fa-3x"></i>
-                 </div>
-               </div>
-               <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-             </a>
-           </div>
-           <div class="col-md-6 col-lg-4">
-             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                   <i class="fa fa-search-plus fa-3x"></i>
-                 </div>
-               </div>
-               <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-             </a>
-           </div>
-           <div class="col-md-6 col-lg-4">
-             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                   <i class="fa fa-search-plus fa-3x"></i>
-                 </div>
-               </div>
-               <img class="img-fluid" src="img/portfolio/game.png" alt="">
-             </a>
-           </div>
-           <div class="col-md-6 col-lg-4">
-             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
-               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                   <i class="fa fa-search-plus fa-3x"></i>
-                 </div>
-               </div>
-               <img class="img-fluid" src="img/portfolio/safe.png" alt="">
-             </a>
-           </div>
-           <div class="col-md-6 col-lg-4">
-             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                   <i class="fa fa-search-plus fa-3x"></i>
-                 </div>
-               </div>
-               <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
-             </a>
-           </div>
-	 #######################################
-				 -->
+     <!-- Portfolio Grid Section -->
+
+				 <!-- Accent-colored raised button -->
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="loadmydata">
+		<script  src="js/index.js"></script>
+		<i class="material-icons">exit_to_app</i> Load
+	</button>
+
+
+
+
+
+
+					 <section class="portfolio" id="portfolio">
+					       <div class="container">
+					         <h2 class="text-center text-uppercase text-secondary mb-0">My cookbook</h2>
+					         <hr class="star-dark mb-5">
+					         <div class="row">
+					           <div class="col-md-6 col-lg-4">
+					             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+					               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+					                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+					                   <i class="fa fa-search-plus fa-3x"></i>
+					                 </div>
+					               </div>
+					               <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+					             </a>
+					           </div>
+					           <div class="col-md-6 col-lg-4">
+					             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+					               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+					                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+					                   <i class="fa fa-search-plus fa-3x"></i>
+					                 </div>
+					               </div>
+					               <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+					             </a>
+					           </div>
+					           <div class="col-md-6 col-lg-4">
+					             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+					               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+					                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+					                   <i class="fa fa-search-plus fa-3x"></i>
+					                 </div>
+					               </div>
+					               <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+					             </a>
+					           </div>
+					           <div class="col-md-6 col-lg-4">
+					             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+					               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+					                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+					                   <i class="fa fa-search-plus fa-3x"></i>
+					                 </div>
+					               </div>
+					               <img class="img-fluid" src="img/portfolio/game.png" alt="">
+					             </a>
+					           </div>
+					           <div class="col-md-6 col-lg-4">
+					             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+					               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+					                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+					                   <i class="fa fa-search-plus fa-3x"></i>
+					                 </div>
+					               </div>
+					               <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+					             </a>
+					           </div>
+					           <div class="col-md-6 col-lg-4">
+					             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+					               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+					                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+					                   <i class="fa fa-search-plus fa-3x"></i>
+					                 </div>
+					               </div>
+					               <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+					             </a>
+					           </div>
+					         </div>
+					       </div>
+					     </section>
+
 
 					 <!--
 <dom-module id="my-notes">
@@ -379,10 +388,10 @@
 
 </dom-module> -->
 
-      <!--   </div> div=row-->
+         </div>
 
 
-       </div>
+
      </section>
 
 
@@ -530,7 +539,27 @@
  		              <textarea class="input100" name="message" placeholder="How do I cook?"></textarea>
  		            </div>
 
+								<div class="wrap-input100 validate-input bg1" >
+ 		              <span class="label-input100">Add an image</span>
+									<!-- Accent-colored raised button -->
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect" >
+						<script  src="js/index.js"></script>
+						Upload
+					</button>
+ 		            </div>
+
+								<div class="wrap-input100 validate-input bg1" >
+ 		              <span class="label-input100">Add a video</span>
+									<!-- Accent-colored raised button -->
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect" >
+						<script  src="js/index.js"></script>
+						Upload
+					</button>
+ 		            </div>
+
  		            <div class="container-contact100-form-btn" >
+
+
  		              <button class="contact100-form-btn" id="justadd" >
 										<!--<paper-button id="add" on-tap="add">Add</paper-button> -->
  		                <script  src="js/index.js"></script>
@@ -629,14 +658,147 @@
        </div>
      </section>
 
+<!-- discover -->
+
+<section id="discover">
+<div id="discoverkit"  >
+
+</div>
+
+<!-- Portfolio Grid Section -->
+
+		<!-- Accent-colored raised button -->
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="loadmydata1">
+<script  src="js/index.js"></script>
+<i class="material-icons">exit_to_app</i> Load
+</button>
+
+
+
+
+
+
+
+						<div class="container">
+							<h2 class="text-center text-uppercase text-secondary mb-0">Discover Cooks</h2>
+							<hr class="star-dark mb-5">
+							<div class="row">
+								<div class="col-md-6 col-lg-4">
+									<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+										<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+											<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+												<i class="fa fa-search-plus fa-3x"></i>
+											</div>
+										</div>
+										<img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+									</a>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+										<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+											<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+												<i class="fa fa-search-plus fa-3x"></i>
+											</div>
+										</div>
+										<img class="img-fluid" src="img/portfolio/cake.png" alt="">
+									</a>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+										<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+											<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+												<i class="fa fa-search-plus fa-3x"></i>
+											</div>
+										</div>
+										<img class="img-fluid" src="img/portfolio/circus.png" alt="">
+									</a>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+										<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+											<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+												<i class="fa fa-search-plus fa-3x"></i>
+											</div>
+										</div>
+										<img class="img-fluid" src="img/portfolio/game.png" alt="">
+									</a>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+										<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+											<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+												<i class="fa fa-search-plus fa-3x"></i>
+											</div>
+										</div>
+										<img class="img-fluid" src="img/portfolio/safe.png" alt="">
+									</a>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+										<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+											<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+												<i class="fa fa-search-plus fa-3x"></i>
+											</div>
+										</div>
+										<img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+
+
+			<!--
+<dom-module id="my-notes">
+<template>
+<firebase-auth user="{{user}}"></firebase-auth>
+<firebase-query
+id="query"
+path="/users/[[user.uid]]/notes"
+data="{{notes}}">
+</firebase-query>
+<div id="card">
+<div id="notes">
+ <ul id="notes-list">
+	 <template is="dom-repeat" items=[[notes]] as="note">
+		 <li>
+			 <p class="content"> [[note.content]]</p>
+		 </li>
+	 </template>
+ </ul>
+</div>
+</div>
+</template>
+
+<script  src="js/index.js"></script>
+
+</dom-module> -->
+
+		</div>
+
+
+
+
+
+
+
+</section>
+</div>
+
+
+
+
+
+
+
      <!-- Footer -->
      <footer class="footer text-center">
        <div class="container">
          <div class="row">
            <div class="col-md-4 mb-5 mb-lg-0">
-             <h4 class="text-uppercase mb-4">Location</h4>
-             <p class="lead mb-0">2215 John Daniel Drive
-               <br>Clark, MO 65243</p>
+             <h4 class="text-uppercase mb-4">Team</h4>
+             <p class="lead mb-0">the-vibrant-lee
+               <br>HackerEarth</p>
            </div>
            <div class="col-md-4 mb-5 mb-lg-0">
              <h4 class="text-uppercase mb-4">Around the Web</h4>
@@ -669,8 +831,8 @@
              </ul>
            </div>
            <div class="col-md-4">
-             <h4 class="text-uppercase mb-4">About Freelancer</h4>
-             <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
+             <h4 class="text-uppercase mb-4">About Online Kitchenette</h4>
+             <p class="lead mb-0">It is a social platform fr cooks aimed at empowering women
                <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
            </div>
          </div>
@@ -679,7 +841,7 @@
 
      <div class="copyright py-4 text-center text-white">
        <div class="container">
-         <small>Copyright &copy; Your Website 2018</small>
+         <small>Copyright &copy; the Online Kitchenette 2018</small>
        </div>
      </div>
 
@@ -693,6 +855,7 @@
      <!-- Portfolio Modals -->
 
      <!-- Portfolio Modal 1 -->
+		 <div id="fortheback">
      <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
        <div class="portfolio-modal-dialog bg-white">
          <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
@@ -701,16 +864,41 @@
          <div class="container text-center">
            <div class="row">
              <div class="col-lg-8 mx-auto">
-               <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+               <h2 class="text-secondary text-uppercase mb-0">Chocolate cake</h2>
                <hr class="star-dark mb-5">
                <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
                <p class="mb-5">
 								 <dl>
-  							 <dt>Coffee</dt>
-  						 			<dd>Black hot drink</dd>
-  					 			<dt>Milk</dt>
-  				 						<dd>White cold drink</dd>
-				 					</dl>
+									 <dt>Description</dt>
+									 <dd>Master the chocolate cake with an airy, light sponge and rich buttercream filling. It's simple enough for an afternoon tea but special enough for a party too</dd>
+									 <dt>Time</dt>
+									 <dd>35 MINS</dd>
+									 <dt>Serves</dt>
+									 <dd>10 - 12</dd>
+									 <dt>Type</dt>
+									 <dd>Desert/ Bakery Product</dd>
+
+								 <dt>Ingredients</dt>
+  						 			<dd>200g golden caster sugar
+200g unsalted butter
+
+, softened plus extra for the tins
+4 eggs
+
+200g self-raising flour
+2 tbsp cocoa powder
+1 tsp baking powder
+
+½ tsp vanilla extract
+2 tbsp milk</dd>
+  					 			<dt>Steps</dt>
+  				 						<dd>Heat oven to 190C/170C fan/gas 5. Butter the base and sides of two 20cm round sandwich tins, then line the bases with baking parchment.
+
+In a large bowl, beat all the cake ingredients and a pinch of salt together until pale. Divide the mixture between the prepared tins. Bake for 20 mins or until a skewer inserted into the centre of the cake comes out clean. Leave to cool in the tin for 10 mins, then turn out onto a wire rack to cool completely.</dd>
+
+
+
+									</dl>
 							 </p>
                <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                  <i class="fa fa-close"></i>
@@ -721,9 +909,9 @@
        </div>
      </div>
 
-		 <div id="fortheback"></div>
-<!--
-      Portfolio Modal 2
+		 </div>
+
+    <!--  Portfolio Modal 2 -->
      <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
        <div class="portfolio-modal-dialog bg-white">
          <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
@@ -735,7 +923,37 @@
                <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
                <hr class="star-dark mb-5">
                <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+               <p class="mb-5"><dl>
+								 <dt>Description</dt>
+								 <dd>Master the chocolate cake with an airy, light sponge and rich buttercream filling. It's simple enough for an afternoon tea but special enough for a party too</dd>
+								 <dt>Time</dt>
+								 <dd>35 MINS</dd>
+								 <dt>Serves</dt>
+								 <dd>10 - 12</dd>
+								 <dt>Type</dt>
+								 <dd>Desert/ Bakery Product</dd>
+
+							 <dt>Ingredients</dt>
+									<dd>200g golden caster sugar
+200g unsalted butter
+
+, softened plus extra for the tins
+4 eggs
+
+200g self-raising flour
+2 tbsp cocoa powder
+1 tsp baking powder
+
+½ tsp vanilla extract
+2 tbsp milk</dd>
+								<dt>Steps</dt>
+										<dd>Heat oven to 190C/170C fan/gas 5. Butter the base and sides of two 20cm round sandwich tins, then line the bases with baking parchment.
+
+In a large bowl, beat all the cake ingredients and a pinch of salt together until pale. Divide the mixture between the prepared tins. Bake for 20 mins or until a skewer inserted into the centre of the cake comes out clean. Leave to cool in the tin for 10 mins, then turn out onto a wire rack to cool completely.</dd>
+
+
+
+								</dl></p>
                <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                  <i class="fa fa-close"></i>
                  Close Project</a>
@@ -745,7 +963,7 @@
        </div>
      </div>
 
-      Portfolio Modal 3
+    <!--  Portfolio Modal 3 -->
      <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
        <div class="portfolio-modal-dialog bg-white">
          <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
@@ -757,7 +975,37 @@
                <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
                <hr class="star-dark mb-5">
                <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+               <p class="mb-5"><dl>
+								 <dt>Description</dt>
+								 <dd>Master the chocolate cake with an airy, light sponge and rich buttercream filling. It's simple enough for an afternoon tea but special enough for a party too</dd>
+								 <dt>Time</dt>
+								 <dd>35 MINS</dd>
+								 <dt>Serves</dt>
+								 <dd>10 - 12</dd>
+								 <dt>Type</dt>
+								 <dd>Desert/ Bakery Product</dd>
+
+							 <dt>Ingredients</dt>
+									<dd>200g golden caster sugar
+200g unsalted butter
+
+, softened plus extra for the tins
+4 eggs
+
+200g self-raising flour
+2 tbsp cocoa powder
+1 tsp baking powder
+
+½ tsp vanilla extract
+2 tbsp milk</dd>
+								<dt>Steps</dt>
+										<dd>Heat oven to 190C/170C fan/gas 5. Butter the base and sides of two 20cm round sandwich tins, then line the bases with baking parchment.
+
+In a large bowl, beat all the cake ingredients and a pinch of salt together until pale. Divide the mixture between the prepared tins. Bake for 20 mins or until a skewer inserted into the centre of the cake comes out clean. Leave to cool in the tin for 10 mins, then turn out onto a wire rack to cool completely.</dd>
+
+
+
+								</dl></p>
                <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                  <i class="fa fa-close"></i>
                  Close Project</a>
@@ -767,7 +1015,7 @@
        </div>
      </div>
 
-      Portfolio Modal 4
+      <!--  Portfolio Modal 4 -->
      <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
        <div class="portfolio-modal-dialog bg-white">
          <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
@@ -779,7 +1027,37 @@
                <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
                <hr class="star-dark mb-5">
                <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
-               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+               <p class="mb-5"><dl>
+								 <dt>Description</dt>
+								 <dd>Master the chocolate cake with an airy, light sponge and rich buttercream filling. It's simple enough for an afternoon tea but special enough for a party too</dd>
+								 <dt>Time</dt>
+								 <dd>35 MINS</dd>
+								 <dt>Serves</dt>
+								 <dd>10 - 12</dd>
+								 <dt>Type</dt>
+								 <dd>Desert/ Bakery Product</dd>
+
+							 <dt>Ingredients</dt>
+									<dd>200g golden caster sugar
+200g unsalted butter
+
+, softened plus extra for the tins
+4 eggs
+
+200g self-raising flour
+2 tbsp cocoa powder
+1 tsp baking powder
+
+½ tsp vanilla extract
+2 tbsp milk</dd>
+								<dt>Steps</dt>
+										<dd>Heat oven to 190C/170C fan/gas 5. Butter the base and sides of two 20cm round sandwich tins, then line the bases with baking parchment.
+
+In a large bowl, beat all the cake ingredients and a pinch of salt together until pale. Divide the mixture between the prepared tins. Bake for 20 mins or until a skewer inserted into the centre of the cake comes out clean. Leave to cool in the tin for 10 mins, then turn out onto a wire rack to cool completely.</dd>
+
+
+
+								</dl></p>
                <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                  <i class="fa fa-close"></i>
                  Close Project</a>
@@ -789,7 +1067,7 @@
        </div>
      </div>
 
-      Portfolio Modal 5
+      <!--  Portfolio Modal 5 -->
 			<div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
         <div class="portfolio-modal-dialog bg-white">
           <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
@@ -801,7 +1079,37 @@
                 <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
                 <hr class="star-dark mb-5">
                 <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <p class="mb-5"><dl>
+									<dt>Description</dt>
+									<dd>Master the chocolate cake with an airy, light sponge and rich buttercream filling. It's simple enough for an afternoon tea but special enough for a party too</dd>
+									<dt>Time</dt>
+									<dd>35 MINS</dd>
+									<dt>Serves</dt>
+									<dd>10 - 12</dd>
+									<dt>Type</dt>
+									<dd>Desert/ Bakery Product</dd>
+
+								<dt>Ingredients</dt>
+									 <dd>200g golden caster sugar
+200g unsalted butter
+
+, softened plus extra for the tins
+4 eggs
+
+200g self-raising flour
+2 tbsp cocoa powder
+1 tsp baking powder
+
+½ tsp vanilla extract
+2 tbsp milk</dd>
+								 <dt>Steps</dt>
+										 <dd>Heat oven to 190C/170C fan/gas 5. Butter the base and sides of two 20cm round sandwich tins, then line the bases with baking parchment.
+
+In a large bowl, beat all the cake ingredients and a pinch of salt together until pale. Divide the mixture between the prepared tins. Bake for 20 mins or until a skewer inserted into the centre of the cake comes out clean. Leave to cool in the tin for 10 mins, then turn out onto a wire rack to cool completely.</dd>
+
+
+
+								 </dl></p>
                 <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
                   Close Project</a>
@@ -811,7 +1119,7 @@
         </div>
       </div>
 
-     Portfolio Modal 6
+     <!--  Portfolio Modal 6 -->
      <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
        <div class="portfolio-modal-dialog bg-white">
          <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
@@ -823,7 +1131,37 @@
                <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
                <hr class="star-dark mb-5">
                <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
-               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+               <p class="mb-5"><dl>
+								 <dt>Description</dt>
+								 <dd>Master the chocolate cake with an airy, light sponge and rich buttercream filling. It's simple enough for an afternoon tea but special enough for a party too</dd>
+								 <dt>Time</dt>
+								 <dd>35 MINS</dd>
+								 <dt>Serves</dt>
+								 <dd>10 - 12</dd>
+								 <dt>Type</dt>
+								 <dd>Desert/ Bakery Product</dd>
+
+							 <dt>Ingredients</dt>
+									<dd>200g golden caster sugar
+200g unsalted butter
+
+, softened plus extra for the tins
+4 eggs
+
+200g self-raising flour
+2 tbsp cocoa powder
+1 tsp baking powder
+
+½ tsp vanilla extract
+2 tbsp milk</dd>
+								<dt>Steps</dt>
+										<dd>Heat oven to 190C/170C fan/gas 5. Butter the base and sides of two 20cm round sandwich tins, then line the bases with baking parchment.
+
+In a large bowl, beat all the cake ingredients and a pinch of salt together until pale. Divide the mixture between the prepared tins. Bake for 20 mins or until a skewer inserted into the centre of the cake comes out clean. Leave to cool in the tin for 10 mins, then turn out onto a wire rack to cool completely.</dd>
+
+
+
+								</dl></p>
                <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                  <i class="fa fa-close"></i>
                  Close Project</a>
@@ -832,7 +1170,7 @@
          </div>
        </div>
      </div>
--->
+
      <!-- Bootstrap core JavaScript -->
      <script src="vendor/jquery/jquery.min.js"></script>
      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
